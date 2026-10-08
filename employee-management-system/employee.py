@@ -17,10 +17,9 @@ class Employee:
         self.salary += amount
         print(f"Salary increased by ${amount:.2f}. New salary: ${self.salary:.2f}")
 
-    @classmethod
-    def change_company_name(cls, new_name):
-        cls.company_name = new_name
-        print(f"Company name changed to: {cls.company_name}")
+    def change_company(self, new_name):
+        self.company_name = new_name
+        print(f"Company name changed to: {self.company_name}")
 
     @staticmethod
     def is_valid_salary(salary):
@@ -28,5 +27,7 @@ class Employee:
             return True
         else:
             return False
+
+    
 
         
